@@ -43,7 +43,7 @@ html, body, .container, .hero {
 }
 
 .hero {
-    background: url(/images/ldn_eye.jpg) no-repeat center center; 
+    background: url(/images/cementfeet.jpg) no-repeat center center; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -55,12 +55,16 @@ html, body, .container, .hero {
     margin-top: 10%;
 }
 
+.hero h1 {
+    font-weight: bold;
+}
 .hero h1, .hero h2 {
     background-color: rgba(255,255,255,0.8);
     padding: 0.36em;
     margin: 0;
     display: inline-block;
     line-height: 2em;
+    font-family: 'Cinzel', serif;
 }
 
 .hero .well {
