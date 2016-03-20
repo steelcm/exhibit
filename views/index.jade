@@ -1,0 +1,85 @@
+extends layout
+block content
+    div.hero
+            nav.navbar.navbar-default
+                div.container-fluid
+                    div.navbar-header
+                        a.navbar-brand ArtFart
+            div.container        
+                .hero-text
+                    div.row
+                        div.col-md-12
+                            h1 Exhibit
+                            br
+                            h2 Shazam of the Art World!
+                            if completed
+                                h1 THANKING YOU FOR REGISTATION
+                            else
+                                form(id='form-step-1', action='/index/register', method='post')
+                                    div(data-role='fieldcontain')
+                                        fieldset(data-role='controlgroup')
+                                            label(for='email') email
+                                            input(name='email', id='email',type='text',value='',placeholder='artlover@picasso.com')
+                                            a.btn.btn-default(role='button', data-action='/api/register', style='display:none') Register your insterst 
+                                    div(data-role='fieldcontain')
+                                        fieldset(data-role='controlgroup')
+                                            label(for='interest') Area of interest?
+                                            br
+                                            input(name='interest', type='radio',value='Biz')
+                                            | Business interest?
+                                            br
+                                            input(name='interest',type='radio',value='Community')
+                                            | Community interest?
+                                            br
+                                            input(name='interest',type='radio',value='Info')
+                                            | Information interest?
+                                            br
+                                            a.btn.btn-default(role='button', data-action='/api/register', style='display:none') Register your interest
+                                    div(data-role='fieldcontain')
+                                        fieldset(data-role='controlgroup')
+                                            input(type='submit' value='Register Interest')
+    div.container        
+        div.row
+            div.col-md-12
+                div.grid
+                    div.grid-sizer
+                    div.grid-item.grid-item--width-large
+                        div.content
+                            h3 Some content
+                            p This is some description
+                    div.grid-item.grid-item--width-small
+                        div.content
+                            h3 Some content
+                            p This is some description
+                    div.grid-item.grid-item--width-small
+                        div.content
+                            h3 Some content
+                            p This is some description
+                    div.grid-item.grid-item--width-large
+                        div.content
+                            h3 Some content
+                            p This is some description
+                    div.grid-item.grid-item--width-large
+                        div.content
+                            h3 Some content
+                            p This is some description
+                    div.grid-item.grid-item--width-large
+                        div.content
+                            h3 Some content
+                            p This is some description
+                    div.grid-item.grid-item--width-small
+                        div.content
+                            h3 Some content
+                            p This is some description
+                    div.grid-item.grid-item--width-small
+                        div.content
+                            h3 Some content
+                            p This is some description
+
+block head
+        link(href="/stylesheets/style.css", rel="stylesheet")
+    
+block foot
+    script(src="/vendor/masonry/dist/masonry.pkgd.min.js")
+    script(src="/vendor/angular/angular.min.js")
+    script(src="/javascripts/index.js")
