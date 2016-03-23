@@ -16,12 +16,12 @@ block content
                                 h1 THANKING YOU FOR REGISTATION
                             else
                                 form(id='form-step-1', action='/index/register', method='post')
-                                    div(data-role='fieldcontain')
+                                    div(data-role='fieldcontain')#step-1.step
                                         fieldset(data-role='controlgroup')
                                             label(for='email') email
                                             input(name='email', id='email',type='text',value='',placeholder='artlover@picasso.com')
                                             a.btn.btn-default(role='button', data-action='/api/register', style='display:none') Register your insterst 
-                                    div(data-role='fieldcontain')
+                                    div(data-role='fieldcontain')#step-2.step
                                         fieldset(data-role='controlgroup')
                                             label(for='interest') Area of interest?
                                             br

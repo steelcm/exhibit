@@ -16,4 +16,25 @@ router.post('/index/register', function(req, res, next) {
     res.redirect(301, '/');
 });
 
+// POST: register email
+router.post('/api/register', function(req, res, next) {
+    var transactionGuid = req.body.guid !== undefined ? req.body.guid : guid();
+    var email = req.body.email !== undefined ? req.body.email : null;
+    var interest = req.body.interest !== undefined ? req.body.interest : null;
+    console.log('transaction.guid = ' + transactionGuid)
+    console.log('req.body.email = ' + email);
+    console.log('req.body.interest = ' + interest);
+    res.json({'guid': transactionGuid, 'email': email, 'interest': interest })
+});
+
 module.exports = router;
+
+function guid() {
+  function s4() {
+    return Math.floor((1 + Math.random()) * 0x10000)
+      .toString(16)
+      .substring(1);
+  }
+  return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+    s4() + '-' + s4() + s4() + s4();
+}
